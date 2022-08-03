@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "requirement": {
+        "trigger": "minecraft:item_used_on_block",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:firework_rocket"
+            ],
+            "nbt": "{CustomModelData:21}"
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "poka:use_ougi"
+    }
+  }

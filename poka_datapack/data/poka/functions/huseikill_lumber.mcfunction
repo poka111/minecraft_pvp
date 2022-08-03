@@ -1,0 +1,2 @@
+execute as @a[scores={huseibousi = 1,Lumber = 1}] run kill @a[scores={Lumber = 1}]
+execute as @a[scores={huseibousi = 1,Lumber = 1}] run scoreboard players set @a[scores={huseibousi = 1,Lumber = 1}] huseibousi 0
