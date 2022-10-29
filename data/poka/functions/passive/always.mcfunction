@@ -1,3 +1,4 @@
+#>poka:passive/always
 ##常に実行されるパッシブスキル
 
 
@@ -16,8 +17,6 @@ execute as @a[scores={sneakTime = 1..,blink = 1..},tag=start] at @s run execute 
 
 
 execute as @a[scores={sneakTime = 1..,blink = 1..},tag=start] at @s run execute if block ^ ^ ^0.5 #minecraft:air_light if block ^ ^ ^1 #minecraft:air_light if block ^ ^ ^1.5 #minecraft:air_light if block ^ ^ ^2 #minecraft:air_light if block ^ ^ ^2.5 #minecraft:air_light if block ^ ^ ^3 #minecraft:air_light if block ^ ^ ^3.5 #minecraft:air_light if block ^ ^ ^4 #minecraft:air_light if block ^ ^ ^4.5 #minecraft:air_light if block ^ ^ ^5 #minecraft:air_light if block ^ ^ ^5.2 #minecraft:air_light run scoreboard players remove @s blink 1
-
-
 
 
 
