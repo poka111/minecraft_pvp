@@ -1,1 +1,0 @@
-give @a[scores= {canSnipe = 0,sniper = 1}] minecraft:spyglass 1

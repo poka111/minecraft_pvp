@@ -1,9 +1,0 @@
-summon minecraft:lightning_bolt ^ ^ ^6
-summon minecraft:lightning_bolt ^ ^ ^7
-summon minecraft:lightning_bolt ^ ^ ^8
-summon minecraft:lightning_bolt ^ ^ ^9
-summon minecraft:lightning_bolt ^ ^ ^10
-summon minecraft:lightning_bolt ^ ^ ^11
-summon minecraft:lightning_bolt ^ ^ ^12
-summon minecraft:lightning_bolt ^ ^ ^13
-summon minecraft:lightning_bolt ^ ^ ^14
