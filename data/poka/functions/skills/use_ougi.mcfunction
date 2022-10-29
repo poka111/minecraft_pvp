@@ -18,7 +18,7 @@ execute as @s[scores={Madansi = 1}] run scoreboard players set @s ULT_Madansi 1
 execute as @s[scores={magician = 1}] run scoreboard players set @s ULT_burst 1
 
 
-playsound minecraft:entity.ender_dragon.ambient player @s ~ ~ ~ 999
+playsound minecraft:entity.ender_dragon.ambient player @s ~ ~ ~
 
 
 #進捗取り消しを実行しないことで、再使用を防ぐ。

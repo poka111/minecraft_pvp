@@ -1,6 +1,6 @@
 
 #克服(モデル:4)
-playsound minecraft:block.glass.break player @s ~ ~ ~ 900
+playsound minecraft:block.glass.break player @s ~ ~ ~
 effect clear @s minecraft:slowness
 effect clear @s minecraft:mining_fatigue
 effect clear @s minecraft:jump_boost

@@ -1,3 +1,4 @@
+#>poka:skills/use_bombbreak
 #ボムブレイク(モデル：9)
 effect give @s minecraft:resistance 1 100
 execute as @e[type=minecraft:creeper] at @s run summon creeper ~ ~ ~ {ExplosionRadius:3,Fuse:0,ignited:true}
