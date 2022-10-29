@@ -1,0 +1,10 @@
+{
+  "replace": true,
+  "values": [
+    "minecraft:barrier",
+    "minecraft:tnt",
+    "minecraft:cave_air",
+    "minecraft:bedrock",
+    "minecraft:diamond_block"
+  ]
+}

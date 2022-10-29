@@ -1,0 +1,18 @@
+{
+    "criteria": {
+      "snipe": {
+        "trigger": "minecraft:using_item",
+        "conditions": {
+          "item": {
+            "items": [
+              "minecraft:spyglass"
+            ]
+          }
+        }
+      }
+    },
+    "rewards": {
+      "function": "poka:snipe"
+    }
+  }
+  

@@ -1,0 +1,10 @@
+{
+  "type": "poka:skyland",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "poka:skyland",
+      "layers": []
+    }
+  }
+}
