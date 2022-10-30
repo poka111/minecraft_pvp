@@ -1,3 +1,4 @@
+#>poka:pra/summon_makemob_reset
 scoreboard players set @a HP40 0
 scoreboard players set @a HP80 0
 scoreboard players set @a HP100 0

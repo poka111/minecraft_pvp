@@ -1,3 +1,4 @@
+#>poka:pra/summon_makemob
 #ゾンビを選択した場合
 
 execute at @a[scores={choose_zonbie = 1,HP40 = 1}] run summon zombie ~-10 ~ ~25 {DeathLootTable:"0",Health:40f,CustomName:'{"text":"HP40","bold":true}',Attributes:[{Name:generic.max_health,Base:40}]}
