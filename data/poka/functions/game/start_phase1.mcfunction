@@ -1,3 +1,4 @@
+#>poka:game/start_phase1
 ##ゲーム開始・フェーズ1
 
 ##全員をマップにTPし、スポーン地点の設定フェーズに入る
@@ -40,7 +41,7 @@ execute unless entity @a[tag=!ready] run tp @a[scores={map = 7}] 2075 -19 2054
 ##研究所
 #2000 0 2000
 
-playsound minecraft:block.wooden_button.click_on player @a ~ ~ ~ 900 1
+playsound minecraft:block.wooden_button.click_on player @a ~ ~ ~
 
 execute unless entity @a[tag=!ready] run title @a title ""
 execute unless entity @a[tag=!ready] run title @a subtitle "スポーン地点を設定してください"

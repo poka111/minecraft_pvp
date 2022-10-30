@@ -1,3 +1,4 @@
+#>poka:game/start
 ##全員をチームに参加
 team join pvp @a
 

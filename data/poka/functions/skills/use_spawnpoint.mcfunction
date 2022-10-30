@@ -20,4 +20,4 @@ execute if entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10] ru
 execute unless entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10] run summon minecraft:armor_stand ~ ~ ~ {Tags:["spawnpoint"],NoAI:true,NoGravity:true,Small:true,Invisible:true}
 
 ##セッティング成功時、全員がスポーンポイント設定済み(setting_spawnpointが0の人が居なければ)の場合は次のフェーズに移行する
-execute unless entity @a[scores={setting_spawnpoint = 0}] run function poka:start_phase2
+execute unless entity @a[scores={setting_spawnpoint = 0}] run function poka:game/start_phase2
