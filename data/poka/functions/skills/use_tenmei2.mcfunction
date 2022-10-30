@@ -1,3 +1,4 @@
+#>poka:skills/use_tenmei2
 #天命の息吹(モデル:15)
 effect give @s minecraft:absorption 30 4 true
 playsound minecraft:entity.ghast.scream player @s ~ ~ ~ 900

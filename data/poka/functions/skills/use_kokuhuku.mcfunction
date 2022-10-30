@@ -1,4 +1,4 @@
-
+#>poka:skills/use_kokuhuku
 #克服(モデル:4)
 playsound minecraft:block.glass.break player @s ~ ~ ~
 effect clear @s minecraft:slowness

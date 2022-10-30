@@ -1,3 +1,4 @@
+#>poka:skills/use_radervision
 scoreboard players set @s skill_RaderVision 1
 
 #レーダービジョン(モデル：1)
