@@ -18,7 +18,7 @@ effect clear @a
 function poka:give/occitem
 
 ##開始サウンド
-playsound minecraft:entity.ender_dragon.ambient player @a ~ ~ ~ 999 1
+execute as @a at @s run playsound minecraft:entity.ender_dragon.ambient player @a ~ ~ ~
 
 ##全員に体力回復(5秒間無敵状態)
 effect give @a minecraft:regeneration 10 200 true
