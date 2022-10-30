@@ -1,3 +1,4 @@
+#>poka:reset/choose_occ
 #職業選択看板の再配置を行う(職業変更を行う場合はreset_scoreも併用必須)
 
 

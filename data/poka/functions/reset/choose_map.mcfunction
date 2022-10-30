@@ -1,3 +1,4 @@
+#>poka:reset/choose_map
 #マップ選択側をリセットする
 setblock 14 -21 34 air replace
 setblock 13 -21 34 air replace

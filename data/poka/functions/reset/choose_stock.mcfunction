@@ -1,3 +1,4 @@
+#>poka:reset/choose_stock
 #ストック選択側をリセット
 setblock 14 -21 22 air replace
 setblock 13 -21 22 air replace

@@ -6,7 +6,7 @@ attribute @a[scores={Assassin = 1},limit=1] minecraft:generic.max_health base se
 attribute @a[scores={sniper = 1},limit=1] minecraft:generic.max_health base set 20
 
 ##スコアボードの初期化
-function poka:reset/reset_score
+function poka:reset/score
 
 ##タグの削除
 tag @a remove start
@@ -39,14 +39,14 @@ spawnpoint @a -8 -23 1
 setblock -1 -22 1 oak_wall_sign[facing = west]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"tp @p 6 -21 1"}}',Text2:'{"text":"\\u8077\\u696d\\u9078\\u629e\\u6240\\u306b\\u5165\\u308b","clickEvent":{"action":"run_command","value":"setblock ~ ~ ~ air"},"bold":true,"underlined":true,"color":"dark_aqua"}'}
 
 ##マップ選択及びストック選択を初期化
-function poka:reset/reset_choose_map
-function poka:reset/reset_choose_stock
+function poka:reset/choose_map
+function poka:reset/choose_stock
 setblock 14 -21 34 redstone_block replace
 setblock 14 -21 22 redstone_block replace
 
 
 ##職業選択の看板を生成
-function poka:reset/reset_choose_occ
+function poka:reset/choose_occ
 
 ##体力回復・更新
 effect give @a minecraft:instant_health 1 100
