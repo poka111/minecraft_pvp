@@ -4,7 +4,7 @@
 execute as @a[scores={passive = 0}] run function poka:give/givemp
 
 ##ブリンク付与開始
-execute as @a[scores={passive = 0}] run function poka:give/give_blink
+execute as @a[scores={passive = 0}] run function poka:give/blink
 
 ##暗殺者　発光パッシブ発動開始
 execute as @a[scores={passive = 0}] run execute as @a[scores={Assassin = 1}] run function poka:passive/assassin_passive

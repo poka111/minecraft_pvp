@@ -14,7 +14,7 @@ schedule function poka:game/delete_tag_a 10s
 effect clear @a
 
 ##アイテム配布
-function poka:give/give_occitem
+function poka:give/occitem
 
 ##開始サウンド
 playsound minecraft:entity.ender_dragon.ambient player @a ~ ~ ~ 999 1
