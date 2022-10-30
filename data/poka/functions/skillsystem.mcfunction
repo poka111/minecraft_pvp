@@ -107,29 +107,16 @@ execute as @a[scores={skill_bombFrea = 1..}] run scoreboard players set @a[score
 
 
 #魔法：サンダー
-execute at @a[scores={thunder = 1,R_click = 1..,MP = 15..}] run function poka:thunder
-execute as @a[scores={thunder = 1,R_click = 1..,MP = 15..}] at @s run scoreboard players remove @s MP 15
-execute at @a[scores={thunder = 1,R_click = 1..}] run scoreboard players set @a[scores={thunder = 1,R_click = 1..}] R_click 0
-
+execute as @a[scores={thunder = 1,R_click = 1..,MP = 15..}] at @s run function poka:skills/magic/thunder/apply
 
 #魔法：エクスプロージョン
-execute at @a[scores={explo = 1,R_click = 1..,MP = 25..}] run summon creeper ^ ^ ^15 {ExplosionRadius:4,Fuse:0,Invulnerable:1}
-execute at @a[scores={explo = 1,R_click = 1..,MP = 25..}] run summon creeper ^7 ^ ^15 {ExplosionRadius:3,Fuse:0,Invulnerable:1}
-execute at @a[scores={explo = 1,R_click = 1..,MP = 25..}] run summon creeper ^-7 ^ ^15 {ExplosionRadius:3,Fuse:0,Invulnerable:1}
-execute as @a[scores={explo = 1,R_click = 1..,MP = 25..}] at @s run scoreboard players remove @s MP 25
-execute at @a[scores={explo = 1,R_click = 1..}] run scoreboard players set @a[scores={explo = 1,R_click = 1..}] R_click 0
+execute as @a[scores={explo = 1,R_click = 1..,MP = 25..}] at @s run function poka:skills/magic/explosion/apply
 
 #魔法：アイシクル
-execute at @a[scores={ice = 1,R_click = 1..,MP = 30..}] run summon area_effect_cloud ^ ^ ^20 {Particle:"block ice",ReapplicationDelay:5,Radius:12f,Duration:100,WaitTime:0,Effects:[{Id:2b,Amplifier:4b,Duration:200},{Id:7b,Amplifier:0b,Duration:1},{Id:8b,Amplifier:250b,Duration:200}]}
-execute as @a[scores={ice = 1,R_click = 1..,MP = 30..}] at @s run scoreboard players remove @s MP 30
-execute at @a[scores={ice = 1,R_click = 1..}] run scoreboard players set @a[scores={ice = 1,R_click = 1..}] R_click 0
+execute as @a[scores={ice = 1,R_click = 1..,MP = 30..}] at @s run function poka:skills/magic/ice/apply
 
 #魔法：ヒーリング
-execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] run effect give @a[scores={magician = 1}] minecraft:instant_health 1 0
-execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] at @s run particle minecraft:heart ~ ~1 ~ 0.4 0.4 0.4 1 15 force @a
-execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] at @s run playsound minecraft:enchant.thorns.hit player @a[scores={healM = 1,R_click = 1..,MP = 10..}] ~ ~ ~ 999
-execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] at @s run scoreboard players remove @s MP 10
-execute as @a[scores={healM = 1,R_click = 1..}] run scoreboard players set @a[scores={healM = 1,R_click = 1..}] R_click 0
+execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] at @s run function poka:skills/magic/heal/apply
 
 #魔法：バーストエクスプロージョン
 function poka:burstexplo
@@ -344,21 +331,13 @@ execute as @a[scores={ULT_Madansi = 1}] run scoreboard players set @a[scores={UL
 execute as @a[scores={ULT_Madansi = 2}] at @s run scoreboard players set @s MP 50
 
 ##テレポーターの特殊スキル実装
-execute as @a[scores={Teleporter=1,R_click=1..}] at @s run function poka:skills/longtp
-
-##システムスキル：食料回復は廃止
-#システムスキル：食料回復(モデル:22)
-#使用時にシステムスキル再配布
-#execute as @a[scores={system_syokuryou = 1..}] run give @a[scores={system_syokuryou = 1..}] minecraft:firework_rocket{CustomModelData:22,display:{Name:"{\"text\":\"食料回復\",\"italic\":false,\"color\":\"gold\"}",Lore:["{\"text\":\"使用すると食料ゲージを回復する。\",\"italic\":false,\"color\":\"white\"}"]}} 1
-#システムスキルの処理
-#execute as @a[scores={system_syokuryou = 1..}] run effect give @a[scores={system_syokuryou = 1..}] minecraft:saturation 999999 10 true
-#execute as @a[scores={system_syokuryou = 1..}] run scoreboard players set @a[scores={system_syokuryou = 1..}] system_syokuryou 0
-
+execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/longtp
 
 #--------------------スキルに直接作用しないシステム------------------
 
 ##試合開始したら、パッシブスキルを有効化
 execute if entity @a[tag=start] run function poka:passive/always
+
 #魔法師MP上限設定
 execute as @a[scores={magician = 1,MP = 100..}] at @s run scoreboard players set @s MP 100
 
@@ -384,7 +363,6 @@ execute as @e[type=minecraft:arrow,nbt={inGround:true}] at @s run data merge ent
 #プレイヤーカウント
 execute store result score count player if entity @a[gamemode=!spectator]
 
-
 #プレイヤー勝利判定処理(ワールドで実行)
 #execute if score count player matches 1 run clear @a
 #execute if score count player matches 1 run setblock -7 -57 23 minecraft:redstone_block replace
@@ -399,9 +377,6 @@ execute as @a[scores={stage0 = 40..}] run setblock -35 -80 162 minecraft:redston
 execute as @a store result score @s regeTime run data get entity @s ActiveEffects[{Id:10b}].Duration
 #再生パーティクル表示(アサシンには表示されないように設定)
 execute as @a[scores={regeTime = 1..,Assassin = 0}] at @s run particle minecraft:heart ~ ~2 ~ 0.3 0.3 0.3 1 0 force @a
-
-##ブリンク数をレベルに設定
-#function poka:system/blinkset_levels
 
 ##スライム奈落TP＆キル
 tp @e[type=minecraft:slime] ~ -100 ~
@@ -498,11 +473,8 @@ execute as @a[scores={magician=1}] at @s run function poka:system/mpset_levels
 execute as @a[scores={Madansi=1}] at @s run function poka:system/mpset_levels
 execute as @a[scores={Teleporter=1}] at @s run function poka:system/blinkset_levels
 
-#死亡処理判定
-execute if entity @a[scores={deaths = 5..,dead = 0}] run gamemode spectator @a[scores={deaths = 5..,dead = 0}]
-execute if entity @a[scores={deaths = 5..,dead = 0}] run title @a[scores={deaths = 5..,dead = 0}] title {"text":"残機が無くなりました"}
-execute if entity @a[scores={deaths = 5..,dead = 0}] run clear @a[scores={deaths = 5..,dead = 0}]
-execute if entity @a[scores={deaths = 5..,dead = 0}] run scoreboard players set @a[scores={deaths = 5..,dead = 0}] dead 1
+#死亡処理判定(once)
+execute if entity @a[scores={deaths = 5..,dead = 0}] at @s run function poka:game/dead
 
 #ロビーのアスレチック落下TP処理
 tp @a[x=-47,y=-25,z=-6,dx=18,dy=1,dz=14] -26 -23 1
