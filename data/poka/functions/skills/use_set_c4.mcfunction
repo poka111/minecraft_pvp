@@ -1,7 +1,7 @@
 #>poka:skills/use_set_c4
 #execute as @e[type=minecraft:firework_rocket] at @s run setblock ~ ~ ~ minecraft:acacia_button[face=floor]
 
-playsound minecraft:block.stone_button.click_on player @s ~ ~ ~ 900 1
+playsound minecraft:block.stone_button.click_on player @s ~ ~ ~
 
 execute at @e[type=minecraft:firework_rocket] run execute if block ~ ~ ~ air run summon minecraft:armor_stand ~ ~ ~ {Tags:["c4"],NoAI:true,NoGravity:true,Small:true,Marker:true,Invisible:true}
 
