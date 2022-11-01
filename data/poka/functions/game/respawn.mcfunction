@@ -6,4 +6,5 @@ effect give @s minecraft:regeneration 10 200 true
 effect give @s minecraft:resistance 10 5 true
 tag @s add respawn
 
+##10秒後にrespawnタグを削除
 schedule function poka:game/delete_tag_a 10s

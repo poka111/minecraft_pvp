@@ -8,6 +8,7 @@
 #全員をチームに参加
 team join pvp @a
 
+##もし準備が未完了のプレイヤーが居たら、 表示して、これ以降の処理をしない
 execute if entity @a[tag=!ready] run tellraw @s "準備が未完了のプレイヤーが存在します"
 
 ##デバッグ町に地点にTP
@@ -41,10 +42,16 @@ execute unless entity @a[tag=!ready] run tp @a[scores={map = 7}] 2075 -19 2054
 ##研究所
 #2000 0 2000
 
-playsound minecraft:block.wooden_button.click_on player @a ~ ~ ~
+##サウンド再生
+execute as @a at @s run playsound minecraft:block.wooden_button.click_on player @s ~ ~ ~
 
+##タイトル表示
 execute unless entity @a[tag=!ready] run title @a title ""
 execute unless entity @a[tag=!ready] run title @a subtitle "スポーン地点を設定してください"
+
+##リスポーン設定用のアイテムを付与
 execute unless entity @a[tag=!ready] run give @a minecraft:firework_rocket{CanPlaceOn:["#minecraft:all"],HideFlags: 16,CustomModelData:32,display:{Name:"{\"text\":\"スポーン地点を設定\",\"italic\":false,\"color\":\"gold\"}",Lore:["{\"text\":\"使用した場所をスポーン地点に設定する\",\"italic\":false,\"color\":\"white\"}"]}} 1
+
+##スピードと透明化を付与
 execute unless entity @a[tag=!ready] run effect give @a minecraft:invisibility 180 200 true
 execute unless entity @a[tag=!ready] run effect give @a minecraft:speed 180 20 true
