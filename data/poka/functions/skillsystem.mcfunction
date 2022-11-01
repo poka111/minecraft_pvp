@@ -118,11 +118,8 @@ execute as @a[scores={ice = 1,R_click = 1..,MP = 30..}] at @s run function poka:
 #魔法：ヒーリング
 execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] at @s run function poka:skills/magic/heal/apply
 
-#魔法：バーストエクスプロージョン
-function poka:burstexplo
-
-#MP全消費
-execute at @a[scores={burstexplo = 1,R_click = 1..}] run scoreboard players set @s MP 0
+#魔法(奥義)：バーストエクスプロージョン
+execute as @a[scores={burstexplo = 1,R_click = 1..}] at @s run function poka:skills/burstexplo
 
 #魔法師の場合のみ通常発動の魔法に切り替える(changeMagic → 0)
 execute at @a[scores={magician = 1,burstexplo = 1,R_click = 1..}] run scoreboard players set @a[scores={magician = 1,burstexplo = 1,R_click = 1..}] changeMagic 0
