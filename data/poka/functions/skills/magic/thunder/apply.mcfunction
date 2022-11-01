@@ -1,5 +1,7 @@
 #>poka:skills/magic/thunder/apply
 
+##魔法・サンダーを発動
+
 #魔法召喚
 summon minecraft:lightning_bolt ^ ^ ^6
 summon minecraft:lightning_bolt ^ ^ ^7

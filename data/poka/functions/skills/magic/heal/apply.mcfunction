@@ -1,5 +1,6 @@
 #>poka:skills/magic/heal/apply
 
+##魔法・ヒーリングを発動
 
 #回復
 effect give @s minecraft:instant_health 1 0
