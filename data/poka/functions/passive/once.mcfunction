@@ -1,4 +1,5 @@
-##一度のみ実行するパッシブスキル(あとはscheduleで管理)
+#>poka:passive/once
+##一度のみ実行するパッシブスキル(あとはscheduleで再帰管理)
 
 ##MP付与開始
 execute as @a[scores={passive = 0}] run function poka:give/givemp_madan

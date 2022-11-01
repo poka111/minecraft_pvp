@@ -1,5 +1,7 @@
-#職業別のアイテムを配布する
-#give_occitem.mcfunctionでは、全員に職業別アイテムを配布する
+#>poka:give/reget_occitem
+
+##職業別のアイテムを配布する
+##give_occitem.mcfunctionでは、全員に職業別アイテムを配布する
 
 execute as @s[scores={Youhei = 1}] run function poka:occ/youhei
 
