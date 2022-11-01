@@ -1,7 +1,8 @@
 ##一度のみ実行するパッシブスキル(あとはscheduleで管理)
 
 ##MP付与開始
-execute as @a[scores={passive = 0}] run function poka:give/givemp
+execute as @a[scores={passive = 0}] run function poka:give/givemp_madan
+execute as @a[scores={passive = 0}] run function poka:give/givemp_magician
 
 ##ブリンク付与開始
 execute as @a[scores={passive = 0}] run function poka:give/blink
