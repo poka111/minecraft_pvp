@@ -1,4 +1,5 @@
+#>poka:finish_ult_madansi
 ##このファンクションは、魔弾士の奥義の終了処理をするものである.
 #スケジュールにて呼び出される.
-clear @a[scores={ULT_Madansi = 2}] minecraft:nether_star
-scoreboard players set @a[scores={ULT_Madansi = 2}] ULT_Madansi 9999
+#再使用不可に設定(ULT_Madansi -> 9999)
+scoreboard players set @s ULT_Madansi 9999
