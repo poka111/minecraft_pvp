@@ -46,6 +46,9 @@ execute as @a[scores={toumei = 1,Assassin = 0}] run effect give @a[scores={toume
 #スキル：透明化(システム処理)(5秒間透明に設定)
 execute as @a[scores={toumei = 1}] run schedule function poka:finish_toumei 80t append
 
+
+##ボマー　スキルシステム
+
 #着弾爆発
 
 execute as @e[type=minecraft:arrow,nbt={CustomPotionEffects:[{Id:4}],inGround:1b}] at @s run summon creeper ~ ~ ~ {ExplosionRadius:4,Fuse:0,Invulnerable:1}
@@ -105,6 +108,8 @@ execute as @a[scores={skill_bombFrea = 1..}] run effect give @a[scores={skill_bo
 execute as @e[scores={skill_bombFrea=1..},type=minecraft:player] at @s run summon creeper ~ ~ ~ {Glowing:true,powered:true,ExplosionRadius:2,Fuse:0}
 execute as @a[scores={skill_bombFrea = 1..}] run scoreboard players set @a[scores={skill_bombFrea = 1..}] skill_bombFrea 0
 
+
+##魔法士　スキルシステム
 
 #魔法：サンダー
 execute as @a[scores={thunder = 1,R_click = 1..,MP = 15..}] at @s run function poka:skills/magic/thunder/apply
@@ -190,6 +195,7 @@ execute as @a[scores={drink = 1..,magician = 1}] run scoreboard players set @a[s
 execute as @a[scores={drink = 1..,Madansi = 1}] at @s run scoreboard players add @s MP 50
 execute as @a[scores={drink = 1..,Madansi = 1}] run scoreboard players set @a[scores={drink = 1..}] drink 0
 
+##鬼人　スキルシステム
 
 ##鬼人化系のスキルは、実装がかなりややこしいので、advancementで処理は行わない。
 #鬼人化・速(無限スキル)(モデル:17)
@@ -285,6 +291,8 @@ execute if score #command delay_ULT_kizinka matches 0 run effect give @a[scores=
 #初期化するまで再使用不可
 execute if score #command delay_ULT_kizinka matches 0 run scoreboard players set @a[scores={ULT_kizinka = 9999}] ULT_kizinka 10000
 
+##アサシン　奥義
+
 #奥義：虚視無双
 #一度だけ実行
 execute as @a[scores={ULT_kokusimusou = 1}] run scoreboard players set #command delay_mahi 300
@@ -303,6 +311,8 @@ execute if score #command delay_mahi matches 0.. run scoreboard players remove #
 execute if score #command delay_mahi matches 0 run gamemode survival @a[scores={ULT_kokusimusou = 0}]
 execute if score #command delay_mahi matches 0 run scoreboard players set @a[scores={ULT_kokusimusou = 2}] ULT_kokusimusou 9999
 
+##スナイパー　奥義
+
 #奥義：四線夜纏一弓
 execute as @a[scores={ULT_sisen = 1}] run effect give @a[scores={ULT_sisen = 1}] minecraft:absorption 180 15 true
 execute as @a[scores={ULT_sisen = 1}] run scoreboard players set #command delay_sisen 300
@@ -316,11 +326,15 @@ execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT
 execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:slow_falling 1 0 true
 execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:slowness 1 100 true
 
+##剣士　奥義
+
 #奥義：鋼強創体(こうきょうそうたい)(剣士の奥義)
 execute as @a[scores={ULT_Kensi = 1}] run effect give @a[scores={ULT_Kensi = 1}] minecraft:resistance 25 100 true
 execute as @a[scores={ULT_Kensi = 1}] run playsound minecraft:entity.ender_dragon.ambient player @a[scores={ULT_Kensi = 1}] ~ ~ ~ 999 1
 execute as @a[scores={ULT_Kensi = 1}] run title @a title "奥義：鋼強創体を発動しました"
 execute as @a[scores={ULT_Kensi = 1}] run scoreboard players set @a[scores={ULT_Kensi = 1}] ULT_Kensi 9999
+
+##魔弾士　奥義
 
 #奥義：無限魔装弾(魔弾士の奥義)ULT_Madansi = 0
 execute as @a[scores={ULT_Madansi = 1}] run schedule function poka:finish_ult_madansi 600t
