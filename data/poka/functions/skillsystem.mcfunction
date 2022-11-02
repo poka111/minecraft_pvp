@@ -386,7 +386,8 @@ effect clear @a[scores={dead = 1}]
 effect clear @a[tag=respawn] minecraft:glowing
 
 
-##スナイパーの処理
+##スナイパーの武器処理
+
 #効果音を設定
 execute as @a[scores={canSnipe = 1,sniper = 1}] run playsound minecraft:entity.lightning_bolt.impact master @a ~ ~ ~ 1000
 #武器を消去
@@ -430,8 +431,8 @@ execute as @a[scores={canSnipe = 1,sniper = 1}] run scoreboard players set @a[sc
 execute as @e[tag=kill] at @s unless entity @p[distance=..150] run kill @s
 
 ##狂弾士　武器処理(弾薬配布)
-execute as @a[scores={SMG = 1,Kyoudan = 1}] run give @a[scores={SMG = 1,Kyoudan = 1}] arrow 1
-execute as @a[scores={SMG = 1,Kyoudan = 1}] run scoreboard players set @a[scores={SMG = 1,Kyoudan = 1}] SMG 0
+execute as @a[scores={SMG = 1,Kyoudan = 1}] at @s run give s arrow 1
+execute as @a[scores={SMG = 1,Kyoudan = 1}] at @s run scoreboard players set @s SMG 0
 
 ##魔弾士　武器処理
 #音声処理
