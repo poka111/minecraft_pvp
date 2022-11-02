@@ -1,3 +1,5 @@
+#>poka:exit
+
 #リスポーン後、リスポーン地点から外に出る為のファンクション
 ##Exit看板使用時に呼び出される
 
@@ -42,7 +44,7 @@ execute as @s[scores={Bommer = 1}] run schedule clear poka:huseikill_bommer
 execute as @s[scores={Assassin = 1}] run schedule clear poka:huseikill_assassin
 
 #ゲームモード変更(サバイバル)
-gamemode survival @s
+gamemode adventure @s
 
 #スポーン地点から抜ける(デバッグ町)
 spreadplayers 54 65 20 20 under 0 false @s
