@@ -1,6 +1,6 @@
 #>poka:game/dead
 
-##残機が0になった人にする処理
+##残機が0になった人にする処理(@s->残機が0になった人)
 
 
 gamemode spectator @s
