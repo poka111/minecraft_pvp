@@ -1,9 +1,8 @@
 ##リセット通知
 title @a title "ゲームリセットを実行しました"
 
-##体力変更職業の体力を初期化
-attribute @a[scores={Assassin = 1},limit=1] minecraft:generic.max_health base set 20
-attribute @a[scores={sniper = 1},limit=1] minecraft:generic.max_health base set 20
+##ステータスを初期化
+function poka:options/state_reset
 
 ##スコアボードの初期化
 function poka:reset/score
