@@ -1,4 +1,4 @@
-#>poka:skills/burstexplo
+#>poka:skills/ult/burstexplo/apply
 ##奥義：バーストエクスプロージョンの処理
 
 #耐性を付与
