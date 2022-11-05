@@ -124,7 +124,7 @@ execute as @a[scores={ice = 1,R_click = 1..,MP = 30..}] at @s run function poka:
 execute as @a[scores={healM = 1,R_click = 1..,MP = 10..}] at @s run function poka:skills/magic/heal/apply
 
 #魔法(奥義)：バーストエクスプロージョン
-execute as @a[scores={burstexplo = 1,R_click = 1..}] at @s run function poka:skills/burstexplo
+execute as @a[scores={burstexplo = 1,R_click = 1..}] at @s run function poka:skills/ult/burstexplo/apply
 
 #魔法師の場合のみ通常発動の魔法に切り替える(changeMagic → 0)
 execute at @a[scores={magician = 1,burstexplo = 1,R_click = 1..}] run scoreboard players set @a[scores={magician = 1,burstexplo = 1,R_click = 1..}] changeMagic 0
@@ -372,10 +372,6 @@ execute as @e[type=minecraft:arrow,nbt={inGround:true}] at @s run data merge ent
 
 #プレイヤーカウント
 execute store result score count player if entity @a[gamemode=!spectator]
-
-#プレイヤー勝利判定処理(ワールドで実行)
-#execute if score count player matches 1 run clear @a
-#execute if score count player matches 1 run setblock -7 -57 23 minecraft:redstone_block replace
 
 #発光をスコア化
 execute as @a store result score @s growTime run data get entity @s ActiveEffects[{Id:24b}].Duration
