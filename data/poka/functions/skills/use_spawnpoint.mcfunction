@@ -13,7 +13,7 @@ execute unless entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10
 
 ##セッティング失敗(他のプレイヤーのスポーンポイントが周囲10m以内に在る場合)
 execute if entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10] run title @s subtitle "近くに他プレイヤーのスポーン地点があります. 場所を変更してください."
-execute if entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10] run give @s minecraft:firework_rocket{CustomModelData:32,display:{Name:"{\"text\":\"スポーン地点を設定\",\"italic\":false,\"color\":\"gold\"}",Lore:["{\"text\":\"使用地点をスポーン地点に設定する\",\"italic\":false,\"color\":\"white\"}"]}} 1
+execute if entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10] run give @s minecraft:firework_rocket{CanPlaceOn:["#minecraft:all"],CustomModelData:32,display:{Name:"{\"text\":\"スポーン地点を設定\",\"italic\":false,\"color\":\"gold\"}",Lore:["{\"text\":\"使用地点をスポーン地点に設定する\",\"italic\":false,\"color\":\"white\"}"]}} 1
 execute if entity @e[type=minecraft:armor_stand,tag=spawnpoint,distance=..10] run advancement revoke @s only poka:use_spawnpoint
 
 ##セッティング成功時の最終動作
