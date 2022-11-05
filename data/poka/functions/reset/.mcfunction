@@ -49,5 +49,5 @@ setblock 14 -21 22 redstone_block replace
 function poka:reset/choose_occ
 
 ##体力回復・更新
-effect give @a minecraft:instant_health 1 100
+effect give @a minecraft:instant_health 5 100
 effect clear @a

@@ -1,5 +1,5 @@
 #>poka:reset/score
-#スコアボードのリセット
+#スコアボードの初期化
 scoreboard players set @a deaths 0
 scoreboard players set @a skill_bombFrea 0
 scoreboard players set @a skill_RaderVision 0
