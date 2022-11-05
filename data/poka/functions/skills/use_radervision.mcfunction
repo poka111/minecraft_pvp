@@ -2,9 +2,9 @@
 scoreboard players set @s skill_RaderVision 1
 
 #レーダービジョン(モデル：1)
-execute as @a[scores={skill_RaderVision = 1..}] run effect give @a[scores={skill_RaderVision = 0}] minecraft:glowing 10 0 true
-execute as @a[scores={skill_RaderVision = 1..}] run playsound minecraft:block.enchantment_table.use player @a[scores={skill_RaderVision = 1..}] ~ ~ ~
-execute as @a[scores={skill_RaderVision = 1..}] run playsound minecraft:block.bamboo.hit player @a[scores={skill_RaderVision = 0}] ~ ~ ~
-execute as @a[scores={skill_RaderVision = 1..}] run scoreboard players set @a[scores={skill_RaderVision = 1..}] skill_RaderVision 0
+effect give @a[scores={skill_RaderVision = 0}] minecraft:glowing 10 0 true
+playsound minecraft:block.enchantment_table.use player @s ~ ~ ~
+playsound minecraft:block.bamboo.hit player @a[scores={skill_RaderVision = 0}] ~ ~ ~
+scoreboard players set @s skill_RaderVision 0
 
 advancement revoke @s only poka:use_radervision
