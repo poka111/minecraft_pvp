@@ -1,4 +1,4 @@
-#>poka:skills/use_toumei
+#>poka:skills/all/toumei
 
 ##未実装・透明になるスキル(アサシンのスキル)
 execute as @s[scores={toumei = 0}] run playsound minecraft:block.enchantment_table.use master @s ~ ~ ~
