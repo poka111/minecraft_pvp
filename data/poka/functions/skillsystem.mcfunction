@@ -341,7 +341,7 @@ execute as @a[scores={ULT_Madansi = 1}] run schedule function poka:finish_ult_ma
 execute as @a[scores={ULT_Madansi = 1}] run scoreboard players set @a[scores={ULT_Madansi = 1}] ULT_Madansi 2
 
 ##テレポーターの特殊スキル実装
-execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/longtp
+execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/teleporter/longtp/apply
 
 #--------------------スキルに直接作用しないシステム------------------
 

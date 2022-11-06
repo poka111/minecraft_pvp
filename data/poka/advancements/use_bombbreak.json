@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_bombbreak"
+      "function": "poka:skills/bommer/bombbreak/apply"
     }
   }

@@ -13,7 +13,7 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_fara"
+      "function": "poka:skills/kenshi/fara/apply"
     }
   }
   

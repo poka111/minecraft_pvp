@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_break_c4"
+      "function": "poka:skills/bommer/break_c4/apply"
     }
   }
