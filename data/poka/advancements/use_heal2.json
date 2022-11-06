@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/heal/2"
+      "function": "poka:skills/all/heal/2"
     }
   }

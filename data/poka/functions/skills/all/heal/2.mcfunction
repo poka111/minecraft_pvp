@@ -1,4 +1,4 @@
-#>poka:skills/heal/2
+#>poka:skills/all/heal/2
 #ヒールⅡ(モデル:12)
 effect give @s minecraft:instant_health 1 1 true
 playsound minecraft:enchant.thorns.hit player @s ~ ~ ~

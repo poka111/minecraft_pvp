@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_ougi"
+      "function": "poka:skills/ult/apply"
     }
   }

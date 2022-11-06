@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_kokuhuku"
+      "function": "poka:skills/all/kokuhuku"
     }
   }
