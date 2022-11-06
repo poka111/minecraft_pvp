@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_tenmei1"
+      "function": "poka:skills/all/tenmei/1"
     }
   }

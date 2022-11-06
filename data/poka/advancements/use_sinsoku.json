@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_sinsoku"
+      "function": "poka:skills/all/sinsoku"
     }
   }

@@ -1,4 +1,4 @@
-#>poka:skills/use_spawnpoint
+#>poka:skills/all/spawnpoint
 #give
 #give @a minecraft:firework_rocket{CustomModelData:32,display:{Name:"{\"text\":\"スポーン地点を設定\",\"italic\":false,\"color\":\"gold\"}",Lore:["{\"text\":\"使用地点をスポーン地点に設定する\",\"italic\":false,\"color\":\"white\"}"]}} 1
 
