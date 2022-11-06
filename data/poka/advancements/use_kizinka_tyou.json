@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_kizinka_tyou"
+      "function": "poka:skills/kizin/tyou"
     }
   }

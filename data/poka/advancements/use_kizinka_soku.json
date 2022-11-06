@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_kizinka_soku"
+      "function": "poka:skills/kizin/soku"
     }
   }

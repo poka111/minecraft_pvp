@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_kizinka_gou"
+      "function": "poka:skills/kizin/gou"
     }
   }
