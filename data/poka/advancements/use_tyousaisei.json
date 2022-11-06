@@ -13,6 +13,6 @@
       }
     },
     "rewards": {
-      "function": "poka:skills/use_tyousaisei"
+      "function": "poka:skills/all/tyousaisei"
     }
   }

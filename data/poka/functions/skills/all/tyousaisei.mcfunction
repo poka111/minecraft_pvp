@@ -1,4 +1,4 @@
-#>poka:skills/use_tyousaisei
+#>poka:skills/all/tyousaisei
 #超再生(モデル：6)
 effect give @s minecraft:regeneration 10 3 true
 playsound minecraft:block.chest.open player @s ~ ~ ~

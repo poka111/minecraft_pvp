@@ -1,4 +1,4 @@
-#>poka:skills/bommer/break_c4/apply
+#>poka:skills/bommer/break_c4
 
 execute as @e[type=minecraft:armor_stand,tag=c4] at @s run summon minecraft:creeper ~ ~ ~ {ExplosionRadius:5,Fuse:0,Invulnerable:1}
 execute as @e[type=minecraft:armor_stand,tag=c4] at @s run setblock ~ ~ ~ air

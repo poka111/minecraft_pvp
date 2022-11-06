@@ -1,4 +1,4 @@
-#>poka:skills/bommer/bombbreak/apply
+#>poka:skills/bommer/bombbreak
 #ボムブレイク(モデル：9)
 effect give @s minecraft:resistance 1 100
 #爆弾を全てのクリーパーの地点に召喚する

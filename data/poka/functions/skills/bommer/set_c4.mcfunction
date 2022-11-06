@@ -1,4 +1,4 @@
-#>poka:skills/use_set_c4
+#>poka:skills/bommer/set_c4
 #execute as @e[type=minecraft:firework_rocket] at @s run setblock ~ ~ ~ minecraft:acacia_button[face=floor]
 
 playsound minecraft:block.stone_button.click_on player @s ~ ~ ~
