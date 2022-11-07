@@ -310,7 +310,6 @@ execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT
 
 ##剣士　奥義
 
-#奥義：鋼強創体(こうきょうそうたい)(剣士の奥義)
 
 
 ##テレポーターの特殊スキル実装
