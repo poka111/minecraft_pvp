@@ -318,9 +318,7 @@ execute as @a[scores={ULT_Kensi = 1}] run scoreboard players set @a[scores={ULT_
 
 ##魔弾士　奥義
 
-#奥義：無限魔装弾(魔弾士の奥義)ULT_Madansi = 0
-execute as @a[scores={ULT_Madansi = 1}] run schedule function poka:finish_ult_madansi 600t
-execute as @a[scores={ULT_Madansi = 1}] run scoreboard players set @a[scores={ULT_Madansi = 1}] ULT_Madansi 2
+
 
 ##テレポーターの特殊スキル実装
 execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/teleporter/longtp/apply

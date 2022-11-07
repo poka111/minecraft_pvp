@@ -1,5 +1,5 @@
 #>poka:skills/ult/apply
-#奥義用のファンクション
+#奥義用のファンクション(奥義アイテムを使用するとこのfunctionを実行)
 #基本的に@sを使っても問題ないが、様々な職業の奥義は、全てこのファンクションを通るので、
 #必ず、対象の職業かどうかのスコア判定をしてから、奥義処理を行う事
 #(挙動とスコア操作がかなりややこしいので、ここは奥義専用のスコア操作のみで、挙動をskillsystemに任せても良い)
@@ -14,7 +14,7 @@ execute as @s[scores={Assassin = 1}] run scoreboard players set @s ULT_kokusimus
 #剣士奥義
 execute as @s[scores={Kenshi = 1}] run scoreboard players set @s ULT_Kensi 1
 #魔弾士奥義ULT_Madansi = 0
-execute as @s[scores={Madansi = 1}] run scoreboard players set @s ULT_Madansi 1
+execute as @s[scores={Madansi = 1}] run function poka:skills/ult/madansi/apply
 #魔法師奥義ULT_burst
 execute as @s[scores={magician = 1}] run scoreboard players set @s ULT_burst 1
 
