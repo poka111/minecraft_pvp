@@ -78,26 +78,8 @@ execute at @e[type=snowball] unless block ~-1.2 ~ ~ air run kill @e[type=snowbal
 
 #ボマー奥義
 
-#無敵処理
-execute as @a[scores={Bommer = 1,R_click = 1..}] run effect give @a[scores={Bommer = 1,R_click = 1..}] minecraft:resistance 5 4
-#音声処理
-execute as @a[scores={Bommer = 1,R_click = 1..}] run playsound minecraft:entity.lightning_bolt.impact master @a[scores={Bommer = 1,R_click = 1..}] ~ ~ ~ 1000
-#弾を生成
-execute at @a[scores={Bommer = 1,R_click = 1..}] run summon armor_stand ~ ~ ~ {NoGravity:1b,Invulnerable:1b,Small:1b,Marker:1b,Invisible:1b,Tags:[Bom,killBom]}
-#弾を自身にテレポート
-execute as @a[scores={Bommer = 1,R_click = 1..}] at @s run tp @e[tag=Bom,distance=..1,sort=nearest,limit=1] ~ ~1.5 ~ ~ ~
-#弾に動力を設定
-execute as @e[tag=Bom] at @s run tp ^ ^ ^1
-#パーティクルを設定
-execute as @e[tag=Bom] at @s run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 0 force
-#弾道上に爆発(クリーパー)を生成
-execute as @e[tag=Bom] at @s run summon creeper ~ ~ ~ {ExplosionRadius:9,Fuse:0,Invulnerable:1}
-#武器を消去
-execute as @a[scores={Bommer = 1,R_click = 1..}] run clear @a[scores={Bommer = 1,R_click = 1..}] minecraft:carrot_on_a_stick
-#奥義を再使用不可に設定
-execute at @a[scores={Bommer = 1,R_click = 1..}] run scoreboard players set @a[scores={Bommer = 1,R_click = 1..}] Gokubaku 9999
-#右クリックのスコアをリセット
-execute at @a[scores={Bommer = 1,R_click = 1..}] run scoreboard players set @a[scores={Bommer = 1,R_click = 1..}] R_click 0
+##apply
+execute as @a[scores={Bommer = 1,R_click = 1..}] run function poka:skills/ult/bommer
 
 #ボマー奥義の距離設定(200mに設定)
 execute as @e[tag=killBom] at @s unless entity @p[distance=..200] run kill @s
