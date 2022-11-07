@@ -12,9 +12,9 @@ execute as @s[scores={sniper = 1}] run scoreboard players set @s ULT_sisen 1
 #暗殺者奥義
 execute as @s[scores={Assassin = 1}] run scoreboard players set @s ULT_kokusimusou 1
 #剣士奥義
-execute as @s[scores={Kenshi = 1}] run scoreboard players set @s ULT_Kensi 1
+execute as @s[scores={Kenshi = 1}] at @s run function poka:skills/ult/kenshi
 #魔弾士奥義ULT_Madansi = 0
-execute as @s[scores={Madansi = 1}] run function poka:skills/ult/madansi/apply
+execute as @s[scores={Madansi = 1}] at @s run function poka:skills/ult/madansi/apply
 #魔法師奥義ULT_burst
 execute as @s[scores={magician = 1}] run scoreboard players set @s ULT_burst 1
 

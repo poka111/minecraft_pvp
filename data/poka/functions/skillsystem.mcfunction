@@ -311,13 +311,6 @@ execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT
 ##剣士　奥義
 
 #奥義：鋼強創体(こうきょうそうたい)(剣士の奥義)
-execute as @a[scores={ULT_Kensi = 1}] run effect give @a[scores={ULT_Kensi = 1}] minecraft:resistance 25 100 true
-execute as @a[scores={ULT_Kensi = 1}] run playsound minecraft:entity.ender_dragon.ambient player @a[scores={ULT_Kensi = 1}] ~ ~ ~ 999 1
-execute as @a[scores={ULT_Kensi = 1}] run title @a title "奥義：鋼強創体を発動しました"
-execute as @a[scores={ULT_Kensi = 1}] run scoreboard players set @a[scores={ULT_Kensi = 1}] ULT_Kensi 9999
-
-##魔弾士　奥義
-
 
 
 ##テレポーターの特殊スキル実装
