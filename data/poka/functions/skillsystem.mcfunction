@@ -308,10 +308,6 @@ execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT
 execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:slow_falling 1 0 true
 execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:slowness 1 100 true
 
-##剣士　奥義
-
-
-
 ##テレポーターの特殊スキル実装
 execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/teleporter/longtp/apply
 
