@@ -444,9 +444,9 @@ execute as @a[scores={Madansi = 1,MP = 50..}] at @s run scoreboard players set @
 execute as @e[tag=kill1] at @s unless entity @p[distance=..100] run kill @s
 
 #MPをレベルに設定
-execute as @a[scores={magician=1}] at @s run function poka:system/mpset_levels
-execute as @a[scores={Madansi=1}] at @s run function poka:system/mpset_levels
-execute as @a[scores={Teleporter=1}] at @s run function poka:system/blinkset_levels
+execute as @a[scores={magician=1}] at @s run function poka:system/all/mpset_levels
+execute as @a[scores={Madansi=1}] at @s run function poka:system/all/mpset_levels
+execute as @a[scores={Teleporter=1}] at @s run function poka:system/all/blinkset_levels
 
 #死亡処理判定(once)
 execute if entity @a[scores={deaths = 5..,dead = 0}] at @s run function poka:game/dead
