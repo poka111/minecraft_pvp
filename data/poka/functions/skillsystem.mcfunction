@@ -325,18 +325,12 @@ execute as @a[scores={Teleporter = 1,blink = 11..}] at @s run scoreboard players
 #全ての着弾した矢を削除(エンティティデータを変更)
 execute as @e[type=minecraft:arrow,nbt={inGround:true}] at @s run data merge entity @s {life:1200}
 
-#暗殺者のダガーHP更新処理
-#effect give @a[nbt={SelectedItem:{id:"minecraft:netherite_sword",tag:{display:{Name:"\"†暗殺者のダガー†\"",Lore:["\"暗殺者が愛用している暗殺用のダガー\""]}}}}] minecraft:instant_health 1 1 true
-
 #殲滅弓ヘカートⅡHP更新＆発光ジャンプ不可付与処理(メインハンド)
 #effect give @a[nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}}] minecraft:glowing 1 0 true
-#effect give @a[nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}}] minecraft:jump_boost 1 250 false
-#effect give @a[nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}}] minecraft:instant_health 1 1 false
+
 
 #殲滅弓ヘカートⅡHP更新＆発光ジャンプ不可付与処理(オフハンド)
 #effect give @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}]}] minecraft:glowing 1 0 true
-#effect give @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}]}] minecraft:jump_boost 1 250 true
-#effect give @a[nbt={Inventory:[{Slot:-106b,id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}]}] minecraft:instant_health 1 0 true
 
 #プレイヤーカウント
 execute store result score count player if entity @a[gamemode=!spectator]
