@@ -1,3 +1,5 @@
+#所持アイテム削除
+clear @a[scores={Madansi = 1}]
 
 #魔弾士の兜
 item replace entity @a[scores={Madansi = 1}] armor.head with minecraft:leather_helmet{display:{Name:"\"魔弾士の兜\"",color:16711888},Unbreakable:1,HideFlags:4,AttributeModifiers:[{AttributeName:"generic.knockback_resistance",Amount:1.0,Operation:0,Slot:"head",UUID:[I;-678450245,-698526209,247239723,-158174080]}]}
