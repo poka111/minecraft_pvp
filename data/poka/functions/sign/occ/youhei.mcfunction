@@ -14,6 +14,6 @@ execute as @s[scores={chose = 0}] run setblock ~ ~ ~ air
 execute as @s[scores={chose = 0}] run setblock -1 -22 1 oak_wall_sign[facing = west]{Text1:'{"text":"","clickEvent":{"action":"run_command","value":"tp @s 6 -21 1"}}',Text2:'{"text":"\\u8077\\u696d\\u9078\\u629e\\u6240\\u306b\\u5165\\u308b","clickEvent":{"action":"run_command","value":"setblock ~ ~ ~ air"},"bold":true,"underlined":true,"color":"dark_aqua"}'}
 execute as @s[scores={chose = 0}] run scoreboard players set @s[scores={chose = 0}] chose 1
 tag @s add ready
-execute as @s[scores={Youhei = 1}] run tp @s 11 -22 28
+execute as @s[scores={Youhei = 1}] run tp @s -4.5 -22 28.5
 title @a[scores={Youhei = 1}] actionbar {"text":"傭兵を選択しました","color":"blue"}
 
