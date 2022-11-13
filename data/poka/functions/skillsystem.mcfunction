@@ -54,6 +54,9 @@ execute as @a[scores={magician=1}] at @s run function poka:system/magic/
 ##鬼人　スキルシステム
 execute as @a[scores={Kizin=1}] at @s run function poka:system/kizin/
 
+##魔弾士　スキルシステム
+execute as @a[scores={Madansi = 1}] at @s run function poka:system/madansi/
+
 ##アサシン　奥義
 
 #奥義：虚視無双
