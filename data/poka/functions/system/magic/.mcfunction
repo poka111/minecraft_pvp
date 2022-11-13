@@ -74,3 +74,7 @@ execute as @a[scores={burstexplo = 1}] run title @a[scores={burstexplo = 1}] act
 
 #魔法切り替え(ヒーリング→サンダーに初期化)
 execute as @a[scores={magician = 1,changeMagic = 4..}] run scoreboard players set @a[scores={magician = 1,changeMagic = 4..}] changeMagic 0
+
+#魔力瓶(MP回復値：50)処理
+execute as @a[scores={drink = 1..,magician = 1}] at @s run scoreboard players add @s MP 50
+execute as @a[scores={drink = 1..,magician = 1}] run scoreboard players set @a[scores={drink = 1..}] drink 0
