@@ -60,6 +60,9 @@ execute as @a[scores={Madansi = 1}] at @s run function poka:system/madansi/
 ##スナイパー　スキルシステム
 execute as @a[scores={sniper = 1}] at @s run function poka:system/sniper/
 
+##テレポーター　スキルシステム
+execute as @a[scores={Teleporter = 1}] at @s run function poka:system/teleporter/
+
 ##アサシン　奥義
 
 #奥義：虚視無双
@@ -80,9 +83,6 @@ execute if score #command delay_mahi matches 0.. run scoreboard players remove #
 execute if score #command delay_mahi matches 0 run gamemode survival @a[scores={ULT_kokusimusou = 0}]
 execute if score #command delay_mahi matches 0 run scoreboard players set @a[scores={ULT_kokusimusou = 2}] ULT_kokusimusou 9999
 
-##テレポーターの特殊スキル実装
-execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/teleporter/longtp/apply
-
 #--------------------スキルに直接作用しないシステム------------------
 
 ##試合開始したら、パッシブスキルを有効化
@@ -90,9 +90,6 @@ execute if entity @a[tag=start] run function poka:passive/always
 
 #魔法師MP上限設定
 execute as @a[scores={magician = 1,MP = 100..}] at @s run scoreboard players set @s MP 100
-
-#テレポーターブリンク数上限設定(10)
-execute as @a[scores={Teleporter = 1,blink = 11..}] at @s run scoreboard players remove @s blink 1
 
 #全ての着弾した矢を削除(エンティティデータを変更)
 execute as @e[type=minecraft:arrow,nbt={inGround:true}] at @s run data merge entity @s {life:1200}
@@ -107,20 +104,10 @@ execute as @e[type=minecraft:arrow,nbt={inGround:true}] at @s run data merge ent
 #プレイヤーカウント
 execute store result score count player if entity @a[gamemode=!spectator]
 
-#発光をスコア化
-execute as @a store result score @s growTime run data get entity @s ActiveEffects[{Id:24b}].Duration
-#発光通知
-execute as @a[scores={growTime = 1..}] run playsound minecraft:block.bamboo.hit master @a[scores={growTime = 1..}] -1.42 -56.00 24.65 999
-execute as @a[scores={stage0 = 40..}] run setblock -35 -80 162 minecraft:redstone_block
-
 #再生をスコア化
 execute as @a store result score @s regeTime run data get entity @s ActiveEffects[{Id:10b}].Duration
 #再生パーティクル表示(アサシンには表示されないように設定)
 execute as @a[scores={regeTime = 1..,Assassin = 0}] at @s run particle minecraft:heart ~ ~2 ~ 0.3 0.3 0.3 1 0 force @a
-
-##スライム奈落TP＆キル
-tp @e[type=minecraft:slime] ~ -100 ~
-kill @e[type=minecraft:slime]
 
 ##死者はエフェクト無効化
 effect clear @a[scores={dead = 1}]
