@@ -80,21 +80,6 @@ execute if score #command delay_mahi matches 0.. run scoreboard players remove #
 execute if score #command delay_mahi matches 0 run gamemode survival @a[scores={ULT_kokusimusou = 0}]
 execute if score #command delay_mahi matches 0 run scoreboard players set @a[scores={ULT_kokusimusou = 2}] ULT_kokusimusou 9999
 
-##スナイパー　奥義
-
-#奥義：四線夜纏一弓
-execute as @a[scores={ULT_sisen = 1}] run effect give @a[scores={ULT_sisen = 1}] minecraft:absorption 180 15 true
-execute as @a[scores={ULT_sisen = 1}] run scoreboard players set #command delay_sisen 300
-execute as @a[scores={ULT_sisen = 1}] run title @a title "奥義：四線夜纏一弓を発動しました"
-scoreboard players set @a[scores={ULT_sisen = 1}] ULT_sisen 9999
-#デバフ処理
-execute if score #command delay_sisen matches 0.. run scoreboard players remove #command delay_sisen 1
-execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:glowing 1 0 true
-execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:levitation 1 0 true
-execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:blindness 1 0 true
-execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:slow_falling 1 0 true
-execute if score #command delay_sisen matches 0.. run effect give @a[scores={ULT_sisen = 0}] minecraft:slowness 1 100 true
-
 ##テレポーターの特殊スキル実装
 execute as @a[scores={Teleporter=1,R_click=1..,blink=10},tag=start] at @s run function poka:skills/teleporter/longtp/apply
 
