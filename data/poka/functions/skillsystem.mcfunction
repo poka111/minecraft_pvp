@@ -83,6 +83,9 @@ execute if score #command delay_mahi matches 0.. run scoreboard players remove #
 execute if score #command delay_mahi matches 0 run gamemode survival @a[scores={ULT_kokusimusou = 0}]
 execute if score #command delay_mahi matches 0 run scoreboard players set @a[scores={ULT_kokusimusou = 2}] ULT_kokusimusou 9999
 
+
+##summon healing area
+#/summon area_effect_cloud ~ ~1 ~ {Particle:"entity_effect",CustomNameVisible:1b,ReapplicationDelay:20,Radius:3f,Duration:200,Age:0,WaitTime:0,Color:16712501,Effects:[{Id:6,Amplifier:1b,Duration:1,ShowParticles:1b}],CustomName:'{"text":"ヒーリングエリア","color":"red","bold":true}'}
 #--------------------スキルに直接作用しないシステム------------------
 
 ##試合開始したら、パッシブスキルを有効化
@@ -92,7 +95,7 @@ execute if entity @a[tag=start] run function poka:passive/always
 execute as @a[scores={magician = 1,MP = 100..}] at @s run scoreboard players set @s MP 100
 
 #全ての着弾した矢を削除(エンティティデータを変更)
-execute as @e[type=minecraft:arrow,nbt={inGround:true}] at @s run data merge entity @s {life:1200}
+execute as @e[type=arrow,nbt={inGround:true}] at @s if data entity @s Owner run data merge entity @s {life:1200}
 
 #殲滅弓ヘカートⅡHP更新＆発光ジャンプ不可付与処理(メインハンド)
 #effect give @a[nbt={SelectedItem:{id:"minecraft:bow",tag:{display:{Name:"\"殲滅弓へカートⅡ\"",Lore:["\"敵を消し去る弓\""]}}}}] minecraft:glowing 1 0 true
