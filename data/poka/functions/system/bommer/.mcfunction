@@ -30,6 +30,13 @@ execute at @e[type=snowball] unless block ~-1.2 ~ ~ air run kill @e[type=snowbal
 ##apply
 execute as @a[scores={Bommer = 1,R_click = 1..}] run function poka:skills/ult/bommer
 
+##奥義のtick実行の設定
+#弾に動力を設定
+execute as @e[tag=Bom] at @s run tp ^ ^ ^1
+#パーティクルを設定
+execute as @e[tag=Bom] at @s run particle minecraft:end_rod ~ ~ ~ 0 0 0 0 0 force
+#弾道上に爆発(クリーパー)を生成
+execute as @e[tag=Bom] at @s run summon creeper ~ ~ ~ {ExplosionRadius:9,Fuse:0,Invulnerable:1}
 #ボマー奥義の距離設定(200mに設定)
 execute as @e[tag=killBom] at @s unless entity @p[distance=..200] run kill @s
 
