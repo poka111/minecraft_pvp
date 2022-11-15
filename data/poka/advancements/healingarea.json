@@ -7,12 +7,12 @@
             "items": [
               "minecraft:firework_rocket"
             ],
-            "nbt": "{CustomModelData:51}"
+            "nbt": "{CustomModelData:50}"
           }
         }
       }
     },
     "rewards": {
-      "function": "poka:skills/all/reversal"
+      "function": "poka:skills/all/healingarea"
     }
   }

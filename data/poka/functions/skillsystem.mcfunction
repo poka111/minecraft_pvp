@@ -1,4 +1,7 @@
 #スキル使用系の奥義のモデルは21に設定しています
+#選択系スキルは50～
+#50:healingarea
+#51:reversal
 
 ##最速で実行
 
@@ -83,9 +86,6 @@ execute if score #command delay_mahi matches 0.. run scoreboard players remove #
 execute if score #command delay_mahi matches 0 run gamemode survival @a[scores={ULT_kokusimusou = 0}]
 execute if score #command delay_mahi matches 0 run scoreboard players set @a[scores={ULT_kokusimusou = 2}] ULT_kokusimusou 9999
 
-
-##summon healing area
-#/summon area_effect_cloud ~ ~1 ~ {Particle:"entity_effect",CustomNameVisible:1b,ReapplicationDelay:20,Radius:3f,Duration:200,Age:0,WaitTime:0,Color:16712501,Effects:[{Id:6,Amplifier:1b,Duration:1,ShowParticles:1b}],CustomName:'{"text":"ヒーリングエリア","color":"red","bold":true}'}
 #--------------------スキルに直接作用しないシステム------------------
 
 ##試合開始したら、パッシブスキルを有効化
