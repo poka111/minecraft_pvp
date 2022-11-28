@@ -5,5 +5,5 @@
 function poka:reset/score
 clear @s
 gamemode adventure @s
-attribute @s minecraft:generic.max_health base set 20
+function poka:options/state_reset
 tp @s -98 -22 38
